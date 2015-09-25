@@ -5,7 +5,7 @@
 {{#each model as |question|}}
   <div class="item">
     <div class="content">
-      {{#link-to 'question' question class="header"}}{{question.question}}{{/link-to}}
+      <div class="header">{{#link-to 'question' question}}{{question.question}}{{/link-to}}</div>
       <div class="description">{{question.author}}</div>
     </div>
   </div>

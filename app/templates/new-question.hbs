@@ -1,21 +1,4 @@
 <div class="ui segment">
   <h2 class="ui header">Ask Your Question!</h2>
-  <form class="ui form">
-    <div class="field">
-      <label for="question">Your Question</label>
-      {{textarea value=question id="question"}}
-    </div>
-
-    <div class="field">
-      <label for="notes">Notes</label>
-      {{textarea value=notes id="notes"}}
-    </div>
-
-    <div class="field">
-      <label for="author">Your Name</label>
-      {{input value=author id="author" class="form-control"}}
-    </div>
-
-    <button {{action 'saveQuestion'}} class="ui button">Ask it!</button>
-  </form>
+  {{new-question-form saveQuestion="saveQuestion"}}
 </div>
