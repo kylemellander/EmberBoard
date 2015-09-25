@@ -6,10 +6,13 @@
   <div class="item">
     {{#link-to 'index'}}Home{{/link-to}}
   </div>
+  <div class="item">
+    <a {{action 'showNewQuestion'}}>Ask a Question</a>
+  </div>
   <div class="right menu">
     <div class="ui right aligned category search item">
       <div class="ui transparent icon input">
-        {{input value=search id="search" class="prompt" placeholder="Your Question"}}
+        {{input value=search id="search" class="prompt" placeholder="Search Questions"}}
         <i class="search link icon"></i>
       </div>
       <div class="results"></div>
@@ -17,4 +20,6 @@
   </div>
 </div>
 
-{{outlet}}
+<div class="ui container km-main-container">
+  {{outlet}}
+</div>
