@@ -1,7 +1,10 @@
 .header {
   font-family: 'Pacifico', cursive;
   color:#F5664D !important;
-  font-size: 1.4em;
+  font-size:1.1em;
+}
+h1.header, h2.header, h3.header {
+  font-size: 1.8em;
 }
 .km-main-container {
   margin-top: 85px;
@@ -21,4 +24,7 @@ a {
 }
 .km-edit-form #question {
   color: #f5664d;
+}
+.km-answers-container {
+  clear:both;
 }

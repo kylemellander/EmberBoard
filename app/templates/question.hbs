@@ -1,1 +1,5 @@
-{{question-tile question=model editQuestion="editQuestion"}}
+{{question-tile question=model editQuestion="editQuestion" deleteQuestion="deleteQuestion"}}
+<div class="km-answers-container">
+  <h2 class="header">Got an Answer?</h2>
+  {{new-answer question=model saveAnswer="saveAnswer"}}
+</div>

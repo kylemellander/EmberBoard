@@ -1,14 +1,15 @@
 <h1 class="ui header">Questions about Ember, because we know you'll have them</h1>
+<div class="ui segment">
+  <div class="ui relaxed divided list">
 
-<div class="ui relaxed divided list">
-
-{{#each model as |question|}}
-  <div class="item">
-    <div class="content">
-      <div class="header">{{#link-to 'question' question}}{{question.title}}{{/link-to}}</div>
-      <div class="description">{{question.author}}</div>
+  {{#each model as |question|}}
+    <div class="item">
+      <div class="content">
+        <div class="header">{{#link-to 'question' question}}{{question.title}}{{/link-to}}</div>
+        <div class="description">{{question.author}}</div>
+      </div>
     </div>
-  </div>
-{{/each}}
+  {{/each}}
 
+  </div>
 </div>

@@ -6,15 +6,19 @@ export default Ember.Route.extend({
   },
   actions: {
     editQuestion(question, params) {
-      debugger;
       Object.keys(params).forEach(function(key) {
         if (params[key]!==undefined && params[key]!=="") {
           question.set(key, params[key]);
         }
       });
-      debugger;
       question.save();
       this.transitionTo('question');
+    },
+    deleteQuestion(question) {
+      question.destroyRecord();
+      this.transitionTo('index');
+      $(".km-main-container").prepend('<div class="ui message">Your question has been deleted</div>');
+      $(".ui.message").delay(3000).fadeOut(1000, function() {$(this).remove();});
     }
   }
 });
