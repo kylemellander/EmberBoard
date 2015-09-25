@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'ember-board',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
-                             'font-src': "'self' https://fonts.gstatic.com data:application",
+                             'font-src': "'self' https://fonts.gstatic.com data",
                              'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
                            },
     firebase: 'https://emberboard.firebaseio.com/',
