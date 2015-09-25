@@ -9,3 +9,16 @@
 a {
   cursor:pointer;
 }
+.km-by {
+  color: #333;
+}
+.sub.header {
+  text-transform:none !important;
+}
+.km-edit {
+  margin-left: 20px !important;
+  color:#4183c4 !important;
+}
+.km-edit-form #question {
+  color: #f5664d;
+}
