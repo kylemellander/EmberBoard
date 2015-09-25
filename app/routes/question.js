@@ -15,16 +15,26 @@ export default Ember.Route.extend({
       this.transitionTo('question');
     },
     deleteQuestion(question) {
-      question.destroyRecord();
+      var answer_deletions = question.get('answers').map(function(answer) {
+        return answer.destroyRecord();
+      });
+      Ember.RSVP.all(answer_deletions).then(function() {
+        return question.destroyRecord();
+      });
       this.transitionTo('index');
       $(".km-main-container").prepend('<div class="ui message">Your question has been deleted</div>');
       $(".ui.message").delay(3000).fadeOut(1000, function() {$(this).remove();});
     },
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
-      newAnswer.save();
-      params.question.save();
+      var question = params.question;
+      question.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function() {
+        return question.save()
+      })
       this.transitionTo('question');
+      $(".km-answer-form textarea").val("");
+      $(".km-answer-form input").val("");
     }
   }
 });
