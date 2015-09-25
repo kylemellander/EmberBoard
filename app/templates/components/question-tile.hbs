@@ -2,7 +2,7 @@
   <h2 class="header">
     {{#if editForm}}{{input value=question.title id="question"}}{{else}}{{question.title}}<a {{action 'showEdit'}} class="ui sub header km-edit">edit</a>{{/if}}
   </h2>
-  <p class="ui segment">{{#if editForm}}{{textarea value=question.notes id="notes"}}{{else}}{{question.notes}}{{/if}}</p>
+  <p class="ui segment km-body">{{#if editForm}}{{textarea value=question.notes id="notes"}}{{else}}{{question.notes}}{{/if}}</p>
   <span class="ui sub header right floated"><span class="km-by">asked by </span>{{#if editForm}}{{input value=question.author id="author"}}{{else}}{{question.author}}{{/if}}</span>
   {{#if editForm}}
     <button {{action 'editQuestion' question}} class="ui button blue">Submit Changes</button>

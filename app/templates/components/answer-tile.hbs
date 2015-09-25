@@ -1,1 +1,5 @@
-{{yield}}
+{{#each question.answers as |answer|}}
+  <div class="km-clear"></div>
+  <div class="ui segment blue inverted km-body">{{answer.body}}</div>
+  <span class="ui sub header right floated"><span class="km-by">answered by </span>{{answer.name}}</span>
+{{/each}}

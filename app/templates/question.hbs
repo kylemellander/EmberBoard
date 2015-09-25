@@ -1,7 +1,8 @@
 {{question-tile question=model editQuestion="editQuestion" deleteQuestion="deleteQuestion"}}
-<div class="km-answers-container">
+<div class="ui segment km-answers-container">
   <h2 class="header">Answers</h2>
   {{answer-tile question=model}}
+  <div class="km-clear"></div>
   <h2 class="header">Got an Answer?</h2>
   {{new-answer question=model saveAnswer="saveAnswer"}}
 </div>
