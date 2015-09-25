@@ -7,7 +7,7 @@ export default Ember.Component.extend({
       if(prompt("What is the password") === "8"){
         this.set('editForm', true);
       } else {
-        $(".ui.form").prepend('<div class="ui message">That was not the right password.</div>');
+        $(".km-main-container").prepend('<div class="ui message">That was not the right password.</div>');
         $(".ui.message").delay(3000).fadeOut(1000, function() {$(this).remove();});
       }
     },
@@ -21,7 +21,7 @@ export default Ember.Component.extend({
         title: this.get('title')
       };
       this.set('editForm', false);
-      $(".ui.form").prepend('<div class="ui message">Your changes have been made</div>');
+      $(".km-main-container").prepend('<div class="ui message">Your changes have been made</div>');
       $(".ui.message").delay(3000).fadeOut(1000, function() {$(this).remove();});
       this.sendAction('editQuestion', question, params);
     },

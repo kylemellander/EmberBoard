@@ -1,1 +1,15 @@
-{{yield}}
+<form class="ui form">
+
+  <div class="field">
+    <label for="body">Your Answer:</label>
+    {{textarea value=body id="body"}}
+  </div>
+
+  <div class="field">
+    <label for="author">Your Name</label>
+    {{input value=author id="author"}}
+  </div>
+
+  <button {{action 'saveAnswer'}} class="ui button">Answer it!</button>
+
+</form>

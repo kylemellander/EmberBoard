@@ -19,6 +19,12 @@ export default Ember.Route.extend({
       this.transitionTo('index');
       $(".km-main-container").prepend('<div class="ui message">Your question has been deleted</div>');
       $(".ui.message").delay(3000).fadeOut(1000, function() {$(this).remove();});
+    },
+    saveAnswer(params) {
+      var newAnswer = this.store.createRecord('answer', params);
+      newAnswer.save();
+      params.question.save();
+      this.transitionTo('question');
     }
   }
 });
