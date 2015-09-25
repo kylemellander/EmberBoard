@@ -1,3 +1,20 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="ui pointing top fixed menu">
+  <div class="header item">
+    <img src="/img/ember.png">
+    EmberBoard
+  </div>
+  <div class="item">
+    {{#link-to 'index'}}Home{{/link-to}}
+  </div>
+  <div class="right menu">
+    <div class="ui right aligned category search item">
+      <div class="ui transparent icon input">
+        {{input value=search id="search" class="prompt" placeholder="Your Question"}}
+        <i class="search link icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </div>
+</div>
 
 {{outlet}}
