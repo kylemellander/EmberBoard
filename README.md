@@ -1,7 +1,7 @@
-# Ember-board
+# EmberBoard
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This app is meant to be the start of a Ember support forum where people can ask questions and give answers.
 
 ## Prerequisites
 
@@ -19,6 +19,11 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
+
+## Demo Site
+
+* Visit our demo at https://emberboard.herokuapp.com/
+* Protip: The editing password is "8".  Real security!
 
 ## Running / Development
 
@@ -39,10 +44,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
@@ -50,4 +51,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
