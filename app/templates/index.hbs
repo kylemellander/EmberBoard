@@ -1,1 +1,14 @@
 <h1 class="ui header">Questions about Ember, because we know you'll have them</h1>
+
+<div class="ui relaxed divided list">
+
+{{#each model as |question|}}
+  <div class="item">
+    <div class="content">
+      {{#link-to 'question' question class="header"}}{{question.question}}{{/link-to}}
+      <div class="description">{{question.author}}</div>
+    </div>
+  </div>
+{{/each}}
+
+</div>
