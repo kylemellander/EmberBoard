@@ -31,10 +31,23 @@ export default Ember.Route.extend({
       question.get('answers').addObject(newAnswer);
       newAnswer.save().then(function() {
         return question.save()
-      })
+      });
       this.transitionTo('question');
       $(".km-answer-form textarea").val("");
       $(".km-answer-form input").val("");
+    },
+    upvote(answer) {
+      var newRating = answer.get('rating');
+      if (newRating===undefined) {
+        newRating = 0;
+      };
+      answer.set('rating', newRating + 1);
+      answer.save();
+    },
+    downvote(answer) {
+      var newRating = answer.get('rating');
+      answer.set('rating', newRating - 1);
+      answer.save();
     }
   }
 });

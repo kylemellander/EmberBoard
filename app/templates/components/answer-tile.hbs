@@ -1,6 +1,10 @@
 <h2 class="header">Answers</h2>
 {{#each question.answers as |answer|}}
   <div class="km-clear"></div>
-  <div class="ui segment blue inverted km-body">{{answer.body}}</div>
+  <div class="ui segment blue inverted km-body">
+    <i class="chevron up icon" {{action 'upvote' answer}}></i>{{answer.rating}}
+    <i class="chevron down icon" {{action 'downvote' answer}}></i>
+    {{answer.body}}
+  </div>
   <span class="ui sub header right floated"><span class="km-by">answered by </span>{{answer.name}}</span>
 {{/each}}

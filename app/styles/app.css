@@ -34,3 +34,7 @@ a {
 .km-body {
   font-size: 1.2em;
 }
+.km-answers-container .icon:hover {
+  color:#f5664d;
+  cursor: pointer;
+}
