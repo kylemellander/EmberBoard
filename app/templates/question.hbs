@@ -1,6 +1,6 @@
 {{question-tile question=model editQuestion="editQuestion" deleteQuestion="deleteQuestion"}}
 <div class="ui segment km-answers-container">
-  {{answer-tile question=model upvote="upvote" downvote="downvote"}}
+  {{answer-tile answers=model.answers upvote="upvote" downvote="downvote"}}
   <div class="km-clear"></div>
   <h2 class="header">Got an Answer?</h2>
   {{new-answer question=model saveAnswer="saveAnswer"}}

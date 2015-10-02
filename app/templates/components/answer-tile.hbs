@@ -1,5 +1,5 @@
 <h2 class="header">Answers</h2>
-{{#each question.answers as |answer|}}
+{{#each sortedAnswers as |answer|}}
   <div class="km-clear"></div>
   <div class="ui segment blue inverted km-body">
     <i class="chevron up icon" {{action 'upvote' answer}}></i>{{answer.rating}}

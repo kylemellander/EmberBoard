@@ -13,6 +13,7 @@
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
     "semantic-ui": "~2.1.4",
-    "firebase": "^2.1.0"
+    "firebase": "^2.1.0",
+    "moment": "~2.10.6"
   }
 }
